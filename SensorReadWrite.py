@@ -31,20 +31,20 @@ def write_data(h, t):
     if h is not None and t is not None:
         # Write hum and temp to file
         print('Temp={0:0.1f}degC  Humidity={1:0.1f}%').format(T,H)
-        GPIO.out(redPin, GPIO.LOW)
-        GPIO.out(greenPin, GPIO.HIGH)
+        GPIO.output(redPin, GPIO.LOW)
+        GPIO.output(greenPin, GPIO.HIGH)
     else:
         print('Failed to get/display reading.')
-        GPIO.out(greenPin, GPIO.LOW)
-        GPIO.out(redPin, GPIO.HIGH)
+        GPIO.output(greenPin, GPIO.LOW)
+        GPIO.output(redPin, GPIO.HIGH)
 
 
 print('Getting ready to read...')
-GPIO.out(redPin, GPIO.HIGH)
-GPIO.out(greenPin, GPIO.HIGH)
+GPIO.output(redPin, GPIO.HIGH)
+GPIO.output(greenPin, GPIO.HIGH)
 time.sleep(0.25)
-GPIO.out(redPin, GPIO.LOW)
-GPIO.out(greenPin, GPIO.LOW)
+GPIO.output(redPin, GPIO.LOW)
+GPIO.output(greenPin, GPIO.LOW)
 oldTime = time.clock()
 
 
